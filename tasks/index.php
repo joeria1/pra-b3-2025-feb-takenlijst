@@ -1,5 +1,5 @@
 <?php
-require_once '../backend/tasksController.php';
+require_once '../backend/taskController.php';
 
 $tasks = getTasks(); // Ophalen van taken
 ?>
