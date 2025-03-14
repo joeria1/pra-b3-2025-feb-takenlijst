@@ -15,16 +15,16 @@ function createTask($data)
 
     // SQL Query
     $pdo = getDatabaseConnection();
-    $stmt = $pdo->prepare("INSERT INTO tasks (title, description, department, status) VALUES (?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO taken (title, description, department, status) VALUES (?, ?, ?, ?)");
     $stmt->execute([$title, $description, $department, $status]);
 
-    header("Location: ../tasks/index.php");
+    header("Location: ../taken/index.php");
     exit;
 }
 
 function getTasks()
 {
     $pdo = getDatabaseConnection();
-    $stmt = $pdo->query("SELECT * FROM tasks WHERE status <> 'done'");
+    $stmt = $pdo->query("SELECT * FROM taken WHERE status <> 'done'");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
