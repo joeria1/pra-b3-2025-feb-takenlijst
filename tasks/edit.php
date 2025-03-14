@@ -1,19 +1,15 @@
-<?php
-require_once '../backend/tasksController.php';
+<?php require_once __DIR__.'../../../backend/config.php';?>
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    createTask($_POST);
-}
-?>
 
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <title>Nieuwe Taak</title>
+    <title>Nieuwe Taak</title> 
     <?php require_once __DIR__.'../index.php';?>
 </head>
 <body>
-    <h1>Nieuwe Taak Toevoegen</h1>
+
+    <h1> Tasks aanpassen </h1>
     <form method="post">
         <label>Titel: <input type="text" name="title" required></label><br>
         <label>Beschrijving: <textarea name="description" required></textarea></label><br>
@@ -28,10 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </select>
         </label><br>
         <select name="status">
-        <option value="open" <?= $taak['status'] == 'open' ? 'selected' : '' ?>>Open</option>
-        <option value="in_progress" <?= $taak['status'] == 'in_progress' ? 'selected' : '' ?>>In Progress</option>
-        <option value="done" <?= $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
-    </select><br>
+            <option value="open" <?= $taak['status'] == 'open' ? 'selected' : '' ?>>Open</option>
+            <option value="in_progress" <?= $taak['status'] == 'in_progress' ? 'selected' : '' ?>>In Progress</option>
+            <option value="done" <?= $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
+        </select><br>
         <button type="submit">Toevoegen</button>
     </form>
 </body>
