@@ -13,6 +13,7 @@ $tasks = getTasks(); // Ophalen van taken
 <body>
     <h1>Takenlijst</h1>
     <a href="create.php">Nieuwe taak toevoegen</a>
+    <a href="tasks/done.php">Bekijk "Done" Taken</a>
     <table border="1">
         <tr>
             <th>Titel</th>
