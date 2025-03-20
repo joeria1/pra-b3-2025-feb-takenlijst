@@ -32,6 +32,7 @@ $tasks = getTasks(); // Ophalen van taken
             <td><a href="edit.php?id=<?= $tasks['id'];?>">Aanpassen</a></td>
 
         </tr>
+        <a href="../tasks/my.php">Bekijk mijn taken</a>
         <?php endforeach; ?>
     </table>
 </body>
