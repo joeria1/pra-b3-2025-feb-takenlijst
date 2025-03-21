@@ -23,12 +23,13 @@
                 <option value="groen">Groen</option>
             </select>
         </label><br>
+        <label>Deadline: <input type="date" name="deadline" value="<?= htmlspecialchars($task['deadline']) ?>" required></label><br>
         <select name="status">
             <option value="open" <?= $taak['status'] == 'open' ? 'selected' : '' ?>>Open</option>
             <option value="in_progress" <?= $taak['status'] == 'in_progress' ? 'selected' : '' ?>>In Progress</option>
             <option value="done" <?= $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
         </select><br>
-        <button type="submit">Toevoegen</button>
+        <button type="submit">Opslaan</button>
     </form>
 </body>
 </html>
