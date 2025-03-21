@@ -15,6 +15,17 @@ function createTask($data)
     }
 
     // SQL Query
+    // Controleer of een taak met dezelfde titel al bestaat
+    $pdo = getDatabaseConnection();
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM taken WHERE title = ?");
+    $stmt->execute([$title]);
+    try {
+        if ($stmt->fetchColumn() > 0) {
+            die("Een taak met deze titel bestaat al!");
+        }
+    } catch (PDOException $e) {
+        die("Databasefout: " . $e->getMessage());
+    }
     $pdo = getDatabaseConnection();
     $stmt = $pdo->prepare("INSERT INTO taken (title, description, department, deadline, status) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$title, $description, $department, $deadline, $status]);
