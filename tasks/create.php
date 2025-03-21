@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="nl">
+<link rel="stylesheet" href="../css/main.css">
+
 <head>
     <title>Nieuwe Taak</title>
     <?php require_once __DIR__.'../index.php';?>
