@@ -6,6 +6,8 @@
 <head>
     <title>Nieuwe Taak</title> 
     <?php require_once __DIR__.'../index.php';?>
+    <link rel="stylesheet" href="../css/main.css">
+
 </head>
 <body>
 
