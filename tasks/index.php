@@ -8,7 +8,9 @@ $tasks = getTasks(); // Ophalen van taken
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Takenlijst</title>
+    
 </head>
 <body>
     <h1>Takenlijst</h1>

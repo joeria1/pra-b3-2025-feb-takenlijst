@@ -41,6 +41,8 @@ $conn->close();
 <html>
 <head>
     <title>Create Item</title>
+    <link rel="stylesheet" href="../css/main.css">
+
 </head>
 <body>
     <h2>Create New Item</h2>
