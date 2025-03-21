@@ -1,5 +1,7 @@
 <?php
 require_once '../backend/taskController.php';
+require '../backend/login/sessioncheck.php';
+
 
 $tasks = getTasks(); // Ophalen van taken
 ?>
