@@ -10,6 +10,8 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="nl">
+<link rel="stylesheet" href="../css/main.css">
+
 <head>
     <title>Done Taken</title>
 </head>
