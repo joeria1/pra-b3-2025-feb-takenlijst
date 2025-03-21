@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '../../../backend/config1.php'; 
+require_once __DIR__ . '/../backend/config1.php'; 
 
 
 $sql = "SELECT title, department FROM tasks WHERE status = 'done'";
