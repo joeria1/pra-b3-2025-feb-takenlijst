@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h1>Welkom bij Pretpark Webapp</h1>
+        <a href="backend/login/login.php">Login</a>
         <img src="logo.png" alt="Pretpark Logo">
         <p>Beheer je taken.</p>
         <a href="tasks/index.php">Naar het takenoverzicht</a>
