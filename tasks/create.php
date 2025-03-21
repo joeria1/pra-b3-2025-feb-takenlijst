@@ -31,9 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </label><br>
         <label>Deadline: <input type="date" name="deadline" required></label><br>
         <select name="status">
-        <option value="open" <?= $taak['status'] == 'open' ? 'selected' : '' ?>>Open</option>
-        <option value="in_progress" <?= $taak['status'] == 'in_progress' ? 'selected' : '' ?>>In Progress</option>
-        <option value="done" <?= $taak['status'] == 'done' ? 'selected' : '' ?>>Done</option>
+        <option value="open">Open</option>
+        <option value="in_progress">In Progress</option>
+        <option value="done">Done</option>
     </select><br>
         <button type="submit">Toevoegen</button>
     </form>
