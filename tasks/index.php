@@ -21,6 +21,8 @@ $tasks = getTasks(); // Ophalen van taken
             <th>Beschrijving</th>
             <th>Status</th>
             <th>Aanpassen</th>
+            <th>Deadline</th>
+
         </tr>
         <?php foreach ($tasks as $task): ?>
         <tr>
@@ -29,6 +31,7 @@ $tasks = getTasks(); // Ophalen van taken
             <td><?= htmlspecialchars($task['status']) ?></td>
             <td><?= htmlspecialchars($task['Beschrijving']) ?></td>
             <td><?= htmlspecialchars($task['afdeling']) ?></td>
+            <td><?= htmlspecialchars($task['deadline']) ?></td>
             <td><a href="edit.php?id=<?= $tasks['id'];?>">Aanpassen</a></td>
 
         </tr>

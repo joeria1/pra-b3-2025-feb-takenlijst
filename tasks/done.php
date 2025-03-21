@@ -4,6 +4,7 @@ require_once __DIR__ . '../../../backend/config1.php';
 
 
 $sql = "SELECT title, department FROM tasks WHERE status = 'done'";
+$stmt = $pdo->query("SELECT * FROM taken WHERE status = 'done' ORDER BY deadline ASC");
 $result = $conn->query($sql); 
 
 ?>
@@ -32,6 +33,7 @@ $result = $conn->query($sql);
                     <tr>
                         <td><?= htmlspecialchars($row['title']) ?></td>
                         <td><?= htmlspecialchars($row['department']) ?></td>
+                        <td><?= htmlspecialchars($task['deadline']) ?></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
