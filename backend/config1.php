@@ -1,13 +1,13 @@
 <?php
+$host = 'localhost';
+$dbname = 'takenlijst';
+$username = 'root';
+$password = '';
 
-#### TODO
-//Hernoem dit bestand naar 'config.php' en vul jouw eigen database-gegevens in.
-//Deze config wordt hierna _niet_ meegestuurd naar je groepsgenoten. Zo kan iedereen zijn eigen wachtwoord, etc. invullen.
-
-$dbHost = 'localhost';
-$dbName = 'takenlijst';
-$dbUser = 'root';
-$dbPass = '';
-
-//De url waarop jouw project staat. Géén slash aan het einde.
-$base_url = 'http://localhost/takenlijst';
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Databaseverbinding mislukt: " . $e->getMessage());
+}
+?>
