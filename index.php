@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pretpark Webapp</title>
-    
+    <a href="backend/login/login.php">Login</a>
+    <a href="backend/login/uitloggen.php">Uitloggen</a>
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
     <div class="container">
         <h1>Welkom bij Pretpark Webapp</h1>
-        <a href="backend/login/login.php">Login</a>
         <img src="logo.png" alt="Pretpark Logo">
         <p>Beheer je taken.</p>
         <a href="tasks/index.php">Naar het takenoverzicht</a>
