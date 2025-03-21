@@ -12,6 +12,8 @@ $tasks = getMyTasks();
 ?>
 
 <!DOCTYPE html>
+<link rel="stylesheet" href="../css/main.css">
+
 <html>
 <head>
     <title>Mijn Taken</title>
