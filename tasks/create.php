@@ -1,5 +1,5 @@
 <?php
-require_once '../backend/tasksController.php';
+require_once '../backend/taskcontroller.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     createTask($_POST);
@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="groen">Groen</option>
             </select>
         </label><br>
+        <label>Deadline: <input type="date" name="deadline" required></label><br>
         <select name="status">
         <option value="open" <?= $taak['status'] == 'open' ? 'selected' : '' ?>>Open</option>
         <option value="in_progress" <?= $taak['status'] == 'in_progress' ? 'selected' : '' ?>>In Progress</option>
