@@ -24,7 +24,6 @@ $tasks = getTasks(); // Ophalen van taken
             <th>Afdeling</th>
             <th>Beschrijving</th>
             <th>Status</th>
-            <th>Aanpassen</th>
             <th>Deadline</th>
 
         </tr>
@@ -32,9 +31,8 @@ $tasks = getTasks(); // Ophalen van taken
         <tr>
             <td><?= htmlspecialchars($task['title']) ?></td>
             <td><?= htmlspecialchars($task['department']) ?></td>
+            <td><?= htmlspecialchars($task['description']) ?></td>
             <td><?= htmlspecialchars($task['status']) ?></td>
-            <td><?= htmlspecialchars($task['Beschrijving']) ?></td>
-            <td><?= htmlspecialchars($task['afdeling']) ?></td>
             <td><?= htmlspecialchars($task['deadline']) ?></td>
             <td><a href="edit.php?id=<?= $tasks['id'];?>">Aanpassen</a></td>
 
