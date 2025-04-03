@@ -1,43 +1,59 @@
 <?php
 
-require_once __DIR__ . '/../backend/config1.php'; 
+require_once __DIR__ . '/../backend/config1.php';
 
 
-$sql = "SELECT title, department FROM tasks WHERE status = 'done'";
-$stmt = $pdo->query("SELECT * FROM taken WHERE status = 'done' ORDER BY deadline ASC");
-$result = $conn->query($sql); 
-
+try {
+   
+    $stmt = $conn->prepare("SELECT * FROM taken WHERE status != 'done' ORDER BY deadline ASC");
+    $stmt->execute();
+    $taken = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Fout bij ophalen van taken: " . $e->getMessage());
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="nl">
-<link rel="stylesheet" href="../css/main.css">
 
 <head>
     <title>Done Taken</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 
-    <h1>Overzicht van "Done" Taken</h1>
-
+    <h1>Open Taken</h1>
     <a href="../index.php">Terug naar alle taken</a> 
 
-    <?php if ($result->num_rows > 0): ?>
+    <?php if (!empty($taken)): ?>
         <table border="1">
             <thead>
                 <tr>
                     <th>Titel</th>
                     <th>Afdeling</th>
+                    <th>Deadline</th>
+                    <th>Actie</th>
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $result->fetch_assoc()): ?>
+                <?php 
+                foreach ($taken as $task){ 
+                ?>
                     <tr>
-                        <td><?= htmlspecialchars($row['title']) ?></td>
-                        <td><?= htmlspecialchars($row['department']) ?></td>
+                        <td><?= htmlspecialchars($task['title']) ?></td>
+                        <td><?= htmlspecialchars($task['afdeling']) ?></td>
                         <td><?= htmlspecialchars($task['deadline']) ?></td>
+                        <td>
+                            <form method="post" action="update_status.php">
+                                <input type="hidden" name="task_id" value="<?= $task['id'] ?>">
+                                <button type="submit">markeer als Done</button>
+                            </form>
+                        </td>
                     </tr>
-                <?php endwhile; ?>
+                <?php 
+                }
+                ?>
             </tbody>
         </table>
     <?php else: ?>
@@ -47,7 +63,4 @@ $result = $conn->query($sql);
 </body>
 </html>
 
-<?php
 
-$conn->close();
-?>
