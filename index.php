@@ -21,10 +21,7 @@
         <a href="afdeling.php?afdeling=inkoop">Inkoop</a> |
         <a href="afdeling.php?afdeling=klantenservice">Klantenservice</a> |
         <a href="afdeling.php?afdeling=groen">Groen</a>
-        <a href="tasks/create.php">Nieuwe Taak</a>
-        <a href="tasks/afdeling.php">Kassa afdeling</a>
-        <a href="tasks/index.php">Takenlijst</a>
-        <a href="tasks/create.php">restaurant</a>
+
     </div>
 </body>
 </html>
