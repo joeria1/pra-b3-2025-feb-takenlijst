@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>Welkom bij Pretpark Webapp</h1>
-        <img src="logo.png" alt="Pretpark Logo">
+        <img src="favicon.ico" alt="Pretpark Logo">
         <p>Beheer al je taken</p>
         <a href="tasks/index.php">Naar het takenoverzicht</a>
         <a href="afdeling.php?afdeling=personeel">Personeel</a> |
@@ -21,10 +21,7 @@
         <a href="afdeling.php?afdeling=inkoop">Inkoop</a> |
         <a href="afdeling.php?afdeling=klantenservice">Klantenservice</a> |
         <a href="afdeling.php?afdeling=groen">Groen</a>
-        <a href="tasks/create.php">Nieuwe Taak</a>
-        <a href="tasks/afdeling.php">Kassa afdeling</a>
-        <a href="tasks/index.php">Takenlijst</a>
-        <a href="tasks/create.php">restaurant</a>
+
     </div>
 </body>
 </html>
