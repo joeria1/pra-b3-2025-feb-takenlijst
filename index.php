@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>Welkom bij Pretpark Webapp</h1>
-        <img src="logo.png" alt="Pretpark Logo">
+        <img src="favicon.ico" alt="Pretpark Logo">
         <p>Beheer al je taken</p>
         <a href="tasks/index.php">Naar het takenoverzicht</a>
         <a href="afdeling.php?afdeling=personeel">Personeel</a> |
