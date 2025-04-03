@@ -30,7 +30,7 @@ function createTask($data)
     $stmt = $pdo->prepare("INSERT INTO taken (title, description, department, deadline, status) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$title, $description, $department, $deadline, $status]);
 
-    header("Location: ../taken/index.php");
+    header("Location: ../tasks/index.php");
     exit;
 }
 
