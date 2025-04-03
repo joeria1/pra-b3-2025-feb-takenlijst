@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="groen">Groen</option>
             </select>
         </label><br>
+        
         <label>Deadline: <input type="date" name="deadline" required></label><br>
         <select name="status">
         <option value="open">Open</option>
