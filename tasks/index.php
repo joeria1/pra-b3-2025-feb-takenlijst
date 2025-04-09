@@ -32,7 +32,7 @@ $tasks = getTasks(); // Ophalen van taken
         </tr>
         <?php foreach ($tasks as $task): ?>
         <tr>
-            <td><?= htmlspecialchars($task['titel']) ?></td>
+            <td><?= htmlspecialchars($task['title']) ?></td>
             <td><?= htmlspecialchars($task['department']) ?></td>
             <td><?= htmlspecialchars($task['description']) ?></td>
             <td><?= htmlspecialchars($task['status']) ?></td>
