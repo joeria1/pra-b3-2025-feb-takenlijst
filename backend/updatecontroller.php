@@ -22,7 +22,7 @@ if (!$task) {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $titel = trim($_POST['titel']);
     $description = trim($_POST['description']);
-    $afdeling = $_POST['department'];
+    $afdeling = $_POST['afdeling'];
     $deadline = $_POST['deadline'];
     $status = $_POST['status'];
 
