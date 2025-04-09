@@ -3,6 +3,9 @@ require_once '../backend/taskController.php';
 require '../backend/login/sessioncheck.php';
 
 
+
+
+
 $tasks = getTasks(); // Ophalen van taken
 ?>
 
@@ -34,7 +37,7 @@ $tasks = getTasks(); // Ophalen van taken
             <td><?= htmlspecialchars($task['description']) ?></td>
             <td><?= htmlspecialchars($task['status']) ?></td>
             <td><?= htmlspecialchars($task['deadline']) ?></td>
-            <td><a href="edit.php?id=<?= $tasks['id'];?>">Aanpassen</a></td>
+            <td><a href="edit.php?id=<?= $task['id'];?>">Aanpassen</a></td>
 
         </tr>
         <a href="../tasks/my.php">Bekijk mijn taken</a>
