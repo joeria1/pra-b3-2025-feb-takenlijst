@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `taken` (
 
 -- Dumpen data van tabel takenlijst.taken: ~2 rows (ongeveer)
 DELETE FROM `taken`;
-INSERT INTO `taken` (`id`, `title`, `description`, `department`, `status`, `deadline`, `user`, `created_at`) VALUES
+INSERT INTO `taken` (`id`, `title`, `description`, `afdeling`, `status`, `deadline`, `user`, `created_at`) VALUES
 	(4, 'max3', 'test9', 'techniek', 'open', '2009-04-22', NULL, NULL),
 	(5, 'ff', 'vv', 'techniek', 'todo', '2025-04-16', NULL, NULL);
 
