@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label>Titel: <input type="text" name="titel" required></label><br>
         <label>Beschrijving: <textarea name="description" required></textarea></label><br>
         <label>Afdeling:
-            <select name="department" required>
+            <select name="afdeling" required>
                 <option value="personeel">Personeel</option>
                 <option value="horeca">Horeca</option>
                 <option value="techniek">Techniek</option>
