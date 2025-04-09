@@ -41,7 +41,7 @@ try {
                 foreach ($taken as $task){ 
                 ?>
                     <tr>
-                        <td><?= htmlspecialchars($task['titel']) ?></td>
+                        <td><?= htmlspecialchars($task['title']) ?></td>
                         <td><?= htmlspecialchars($task['afdeling']) ?></td>
                         <td><?= htmlspecialchars($task['deadline']) ?></td>
                         <td>
