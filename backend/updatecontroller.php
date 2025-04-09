@@ -22,16 +22,16 @@ if (!$task) {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $titel = trim($_POST['titel']);
     $description = trim($_POST['description']);
-    $department = $_POST['department'];
+    $afdeling = $_POST['department'];
     $deadline = $_POST['deadline'];
     $status = $_POST['status'];
 
     // SQL-query om de taak bij te werken
-    $updateStmt = $pdo->prepare("UPDATE taken SET titel = ?, description = ?, department = ?, deadline = ?, status = ? WHERE id = ?");
-    $updateStmt->execute([$titel, $description, $department, $deadline, $status, $_GET['id']]);
+    $updateStmt = $pdo->prepare("UPDATE taken SET title = ?, description = ?, afdeling = ?, deadline = ?, status = ? WHERE id = ?");
+    $updateStmt->execute([$titel, $description, $afdeling, $deadline, $status, $_GET['id']]);
 
     // Redirect na opslaan
-    header("Location: ../taken/index.php");
+    header("Location: ../tasks/index.php");
     exit;
 }
 ?>
