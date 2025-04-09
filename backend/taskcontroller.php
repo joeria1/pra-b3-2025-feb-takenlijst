@@ -17,7 +17,7 @@ function createTask($data)
     // SQL Query
     // Controleer of een taak met dezelfde titel al bestaat
     $pdo = getDatabaseConnection();
-    $stmt = $pdo->prepare("SELECT COUNT(*) FROM taken WHERE titel = ?");
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM taken WHERE title = ?");
     $stmt->execute([$title]);
     try {
         if ($stmt->fetchColumn() > 0) {
