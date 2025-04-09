@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <h1>Nieuwe Taak Toevoegen</h1>
     <form method="post">
-        <label>Titel: <input type="text" name="title" required></label><br>
+        <label>Titel: <input type="text" name="titel" required></label><br>
         <label>Beschrijving: <textarea name="description" required></textarea></label><br>
         <label>Afdeling:
             <select name="department" required>

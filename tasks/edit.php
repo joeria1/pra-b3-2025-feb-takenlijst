@@ -13,7 +13,7 @@
 
     <h1> Tasks aanpassen </h1>
     <form method="post">
-        <label>Titel: <input type="text" name="title" value="<?= htmlspecialchars($task['title']) ?>" required></label><br>
+        <label>Titel: <input type="text" name="titel" value="<?= htmlspecialchars($task['title']) ?>" required></label><br>
         <label>Beschrijving: <textarea name="description" required><?= htmlspecialchars($task['description']) ?></textarea></label><br>
  
         <label>Afdeling:
