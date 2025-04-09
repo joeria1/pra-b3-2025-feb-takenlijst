@@ -15,12 +15,7 @@
         <img src="favicon.ico" alt="Pretpark Logo">
         <p>Beheer al je taken</p>
         <a href="tasks/index.php">Naar het takenoverzicht</a>
-        <a href="afdeling.php?afdeling=personeel">Personeel</a> |
-        <a href="afdeling.php?afdeling=hospitality">Horeca</a> |
-        <a href="afdeling.php?afdeling=techniek">Techniek</a> |
-        <a href="afdeling.php?afdeling=inkoop">Inkoop</a> |
-        <a href="afdeling.php?afdeling=klantenservice">Klantenservice</a> |
-        <a href="afdeling.php?afdeling=groen">Groen</a>
+       
 
     </div>
 </body>
