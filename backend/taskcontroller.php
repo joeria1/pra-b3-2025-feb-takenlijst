@@ -3,21 +3,21 @@ require_once 'database.php';
 
 function createTask($data)
 {
-    $title = trim($data['title']);
+    $titel = trim($data['titel']);
     $description = trim($data['description']);
     $department = trim($data['department']);
     $deadline = trim($data['deadline']);
     $status = 'todo'; // Standaardwaarde
 
     // Inputvalidatie
-    if (empty($title) || empty($description) || empty($department) || empty($deadline)) {
+    if (empty($titel) || empty($description) || empty($department) || empty($deadline)) {
         die("Alle velden zijn verplicht!");
     }
 
     // SQL Query
     // Controleer of een taak met dezelfde titel al bestaat
     $pdo = getDatabaseConnection();
-    $stmt = $pdo->prepare("SELECT COUNT(*) FROM taken WHERE title = ?");
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM taken WHERE titel = ?");
     $stmt->execute([$title]);
     try {
         if ($stmt->fetchColumn() > 0) {
@@ -27,8 +27,8 @@ function createTask($data)
         die("Databasefout: " . $e->getMessage());
     }
     $pdo = getDatabaseConnection();
-    $stmt = $pdo->prepare("INSERT INTO taken (title, description, department, deadline, status) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$title, $description, $department, $deadline, $status]);
+    $stmt = $pdo->prepare("INSERT INTO taken (titel, description, department, deadline, status) VALUES (?, ?, ?, ?, ?)");
+    $stmt->execute([$titel, $description, $department, $deadline, $status]);
 
     header("Location: ../tasks/index.php");
     exit;
