@@ -24,7 +24,7 @@ $tasks = getMyTasks();
     <ul>
         <?php foreach ($tasks as $task): ?>
             <li>
-                <strong><?php echo htmlspecialchars($task['titel']); ?></strong><br>
+                <strong><?php echo htmlspecialchars($task['title']); ?></strong><br>
                 <?php echo htmlspecialchars($task['description']); ?><br>
                 <em>Afdeling: <?php echo htmlspecialchars($task['department']); ?></em>
             </li>
