@@ -14,9 +14,48 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Data exporteren was gedeselecteerd
 
--- Data exporteren was gedeselecteerd
+-- Databasestructuur van takenlijst wordt geschreven
+DROP DATABASE IF EXISTS `takenlijst`;
+CREATE DATABASE IF NOT EXISTS `takenlijst` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `takenlijst`;
+
+-- Structuur van  tabel takenlijst.taken wordt geschreven
+DROP TABLE IF EXISTS `taken`;
+CREATE TABLE IF NOT EXISTS `taken` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `department` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT 'todo',
+  `deadline` date DEFAULT NULL,
+  `user` int DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumpen data van tabel takenlijst.taken: ~2 rows (ongeveer)
+DELETE FROM `taken`;
+INSERT INTO `taken` (`id`, `title`, `description`, `department`, `status`, `deadline`, `user`, `created_at`) VALUES
+	(4, 'max3', 'test9', 'techniek', 'open', '2009-04-22', NULL, NULL),
+	(5, 'ff', 'vv', 'techniek', 'todo', '2025-04-16', NULL, NULL);
+
+-- Structuur van  tabel takenlijst.users wordt geschreven
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `naam` varchar(255) NOT NULL,
+  `username` text NOT NULL,
+  `password` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumpen data van tabel takenlijst.users: ~3 rows (ongeveer)
+DELETE FROM `users`;
+INSERT INTO `users` (`id`, `naam`, `username`, `password`) VALUES
+	(1, 'Testgebruiker 1', 'user1', '$2y$10$XQwbcsOWgM0KvAbya2Ad2efBwTLra2CzeduJtAuY8.BW9EHx.cFKa'),
+	(2, 'Testgebruiker 2', 'user2', '$2y$10$HoDxSJa/4NcFcJ.U.kj9N.cSBgcm75IwUkdgxJhLjRXY/K2cP8Fl.'),
+	(3, 'Testgebruiker 3', 'user3', '$2y$10$M7vkYfdWMYqLzvCqjlOh7.nPc79zwDxtItUOh/91teGikS/XrpNuO');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
