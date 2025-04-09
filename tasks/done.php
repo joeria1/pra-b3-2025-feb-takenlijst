@@ -45,7 +45,7 @@ try {
                         <td><?= htmlspecialchars($task['afdeling']) ?></td>
                         <td><?= htmlspecialchars($task['deadline']) ?></td>
                         <td>
-                            <form method="post" action="update_status.php">
+                            <form method="post" action="index.php">
                                 <input type="hidden" name="task_id" value="<?= $task['id'] ?>">
                                 <button type="submit">markeer als Done</button>
                             </form>
